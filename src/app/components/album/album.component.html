@@ -1,0 +1,14 @@
+<div *ngFor="let album of albums">
+
+  <p>{{ album.title }}</p>
+
+</div>
+
+
+
+<div>
+  <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+    <input type="text" name="title" placeholder="Album name" formControlName="title">
+    <button type="Submit">Add Album</button>
+  </form>
+</div>
